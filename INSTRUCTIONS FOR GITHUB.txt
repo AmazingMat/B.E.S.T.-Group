@@ -1,1 +1,20 @@
-*Instruction for GitHub
+*Instructions for GitHub
+
+1) Open the command window and go to the file where you want the folder to be saved. Copy paste this: "git clone https://github.com/Fatboizzz/B.E.S.T.-Group". Make sure that you have Git installed and you have a GitHub account
+
+2) After making the folder, here are the following commands to be used from checking, sending to receiving files using the command window:
+
+*git status*
+Checks the new files that aren't saved yet. Displays "unsaved" files in the folder in red.
+
+*git add .*
+Adds all the new (untracked) and modified files inside the folder to be recognized as part of the repository. You can use git add "filename" to add specific files.
+
+*git commit -m*
+The commit command is used to save your files in the local repository or the folder which contains your files. The -m means writing a message for others to see. 
+
+*git push*
+Sends your commited files to the online repository. Note that once you send it, there's no going back.
+
+*git pull*
+Gets the copy of the file online and merges it to your copy. Remember to coordinate pushing and pulling.
