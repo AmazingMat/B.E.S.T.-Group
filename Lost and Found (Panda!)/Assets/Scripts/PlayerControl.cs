@@ -10,12 +10,12 @@ public class PlayerControl : MonoBehaviour
     public float Jump_Speed;
 
     private bool On_Ground;
-
+    
     void Update()
     {
 		SpeedBasedMovement();
     }
-
+    
 	void SpeedBasedMovement(){
 
 		if (Input.GetKey(KeyCode.D) && On_Ground == true)
@@ -32,7 +32,7 @@ public class PlayerControl : MonoBehaviour
         }
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if ((collision.collider.tag == "Ground"))
         {
