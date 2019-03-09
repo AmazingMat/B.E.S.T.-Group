@@ -16,8 +16,8 @@ public class PlayerControl : MonoBehaviour
 		SpeedBasedMovement();
     }
     
-	void SpeedBasedMovement(){
-
+	void SpeedBasedMovement()
+    {
 		if (Input.GetKey(KeyCode.D) && On_Ground == true)
 		{
 			Player_rb.velocity = new Vector2 (Walk_Speed, Player_rb.velocity.y);
@@ -26,7 +26,7 @@ public class PlayerControl : MonoBehaviour
 		{
             Player_rb.velocity = new Vector2(-Walk_Speed, Player_rb.velocity.y);
         }
-        if (Input.GetKeyDown(KeyCode.W) && On_Ground == true)
+        if (Input.GetKey(KeyCode.W) && On_Ground == true)
 		{
             Player_rb.velocity = new Vector2(Player_rb.velocity.x, Jump_Speed);
         }
@@ -34,7 +34,7 @@ public class PlayerControl : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if ((collision.collider.tag == "Ground"))
+        if (collision.collider.tag == "Ground")
         {
             On_Ground = true;
         }

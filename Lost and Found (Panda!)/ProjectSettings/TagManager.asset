@@ -6,6 +6,7 @@ TagManager:
   tags:
   - World
   - Ground
+  - Trees
   layers:
   - Default
   - TransparentFX
