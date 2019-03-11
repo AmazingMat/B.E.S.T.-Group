@@ -208,7 +208,7 @@ TextureImporter:
         x: 1463
         y: 1920
         width: 457
-        height: 480
+        height: 431
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,7 +228,7 @@ TextureImporter:
         x: 1920
         y: 1920
         width: 480
-        height: 480
+        height: 434
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -505,9 +505,9 @@ TextureImporter:
       name: Grass - 1_18
       rect:
         serializedVersion: 2
-        x: 1440
+        x: 1432
         y: 480
-        width: 444
+        width: 459
         height: 420
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
