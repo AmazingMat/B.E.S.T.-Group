@@ -9,7 +9,13 @@ public class PlayerControl : MonoBehaviour
     public float Walk_Speed;
     public float Jump_Speed;
 
+    public Animation Left_Cycle;
+    public Animation Right_Cycle;
+
+    public AudioSource Jump_Sound;
+
     private bool On_Ground;
+    private bool Player_On = true;
     
     void Update()
     {
@@ -18,18 +24,24 @@ public class PlayerControl : MonoBehaviour
     
 	void SpeedBasedMovement()
     {
-		if (Input.GetKey(KeyCode.D) && On_Ground == true)
-		{
-			Player_rb.velocity = new Vector2 (Walk_Speed, Player_rb.velocity.y);
-		}
-		if (Input.GetKey(KeyCode.A) && On_Ground == true)
-		{
-            Player_rb.velocity = new Vector2(-Walk_Speed, Player_rb.velocity.y);
+        if (Player_On == true)
+        {
+            if (Input.GetKey(KeyCode.D) && On_Ground == true)
+            {
+                Player_rb.velocity = new Vector2(Walk_Speed, Player_rb.velocity.y);
+            }
+            if (Input.GetKey(KeyCode.A) && On_Ground == true)
+            {
+                Player_rb.velocity = new Vector2(-Walk_Speed, Player_rb.velocity.y);
+
+            }
+            if (Input.GetKey(KeyCode.W) && On_Ground == true)
+            {
+                Player_rb.velocity = new Vector2(Player_rb.velocity.x, Jump_Speed);
+                Jump_Sound.Play();
+            }
         }
-        if (Input.GetKey(KeyCode.W) && On_Ground == true)
-		{
-            Player_rb.velocity = new Vector2(Player_rb.velocity.x, Jump_Speed);
-        }
+		
 	}
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -37,6 +49,10 @@ public class PlayerControl : MonoBehaviour
         if (collision.collider.tag == "Ground")
         {
             On_Ground = true;
+        }
+        if (collision.collider.tag == "Fall Trigger")
+        {
+            Player_On = false;
         }
     }
 

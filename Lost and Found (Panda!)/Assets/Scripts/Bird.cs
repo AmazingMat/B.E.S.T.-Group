@@ -22,7 +22,6 @@ public class Bird : MonoBehaviour
     {
         BirdMovement_Y();
         BirdMovement_X();
-        Debug.Log(transform.position.x);
     }
 
     void BirdMovement_Y()

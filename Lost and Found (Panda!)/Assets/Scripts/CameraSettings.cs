@@ -19,6 +19,8 @@ public class CameraSettings : MonoBehaviour
 
     public Rigidbody2D Player_rb;
     public Rigidbody2D Camera_rb;
+
+    public AudioSource BG_Track;
     
     void Update()
     {
@@ -61,8 +63,8 @@ public class CameraSettings : MonoBehaviour
         }
     }
 
-    void CameraZoom()
+    private void Awake()
     {
-     
+        BG_Track.Play();
     }
 }
