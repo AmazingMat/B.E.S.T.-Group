@@ -62224,9 +62224,8 @@ MonoBehaviour:
   Player_rb: {fileID: 988033086}
   Walk_Speed: 20
   Jump_Speed: 45
-  Left_Cycle: {fileID: 0}
-  Right_Cycle: {fileID: 0}
   Jump_Sound: {fileID: 988033091}
+  animator: {fileID: 988033090}
 --- !u!95 &988033090
 Animator:
   serializedVersion: 3

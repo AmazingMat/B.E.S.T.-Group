@@ -21,7 +21,7 @@ public class CameraSettings : MonoBehaviour
     public Rigidbody2D Camera_rb;
 
     public AudioSource BG_Track;
-    
+ 
     void Update()
     {
         Y_Distance = Player.GetComponent<Transform>().position.y - MainCam.GetComponent<Transform>().position.y;

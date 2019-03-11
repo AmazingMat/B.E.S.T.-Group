@@ -9,14 +9,13 @@ public class PlayerControl : MonoBehaviour
     public float Walk_Speed;
     public float Jump_Speed;
 
-    public Animation Left_Cycle;
-    public Animation Right_Cycle;
-
     public AudioSource Jump_Sound;
 
     private bool On_Ground;
     private bool Player_On = true;
-    
+
+    public Animator animator;
+
     void Update()
     {
 		SpeedBasedMovement();
@@ -24,6 +23,8 @@ public class PlayerControl : MonoBehaviour
     
 	void SpeedBasedMovement()
     {
+        animator.SetFloat("Speed", Player_rb.velocity.x);
+
         if (Player_On == true)
         {
             if (Input.GetKey(KeyCode.D) && On_Ground == true)
